@@ -1,4 +1,4 @@
-import { OK, NO_CONTENT } from 'http-status-codes';
+import { OK, NO_CONTENT, CREATED } from 'http-status-codes';
 import { Response, NextFunction } from 'express';
 import { inject } from 'inversify';
 import {
@@ -149,7 +149,7 @@ export default class OrderController {
   @withException
   async putOrder(@requestBody() order: Order, @response() res: Response) {
     const result = await this.orderService.update(order);
-    res.status(OK).send(result);
+    res.status(CREATED).send(result);
   }
 
   @ApiOperationDelete({

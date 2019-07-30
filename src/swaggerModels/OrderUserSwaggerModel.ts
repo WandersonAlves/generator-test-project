@@ -25,9 +25,9 @@ export class OrderUserSwaggerModel {
 
   @ApiModelProperty({
     description: 'Where the user sells',
-    type: SwaggerDefinitionConstant.STRING,
+    type: SwaggerDefinitionConstant.NUMBER,
   })
-  userBase: string;
+  userBase: number;
 
   @ApiModelProperty({
     description: 'User type',

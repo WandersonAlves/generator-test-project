@@ -53,6 +53,7 @@ const orderType = new GraphQLObjectType({
     orderUser: { type: orderUserType, description: 'User information' },
     createdAt: { type: GraphQLDate },
     updatedAt: { type: GraphQLDate },
+    status: { type: GraphQLString },
     totalOrderValue: {
       type: GraphQLString,
       description: 'How much cost this order',
