@@ -12,6 +12,6 @@ This repo will follow the tags from `generator-kube-microservice-node`.
 
 ### TO-DO
 
-[] GraphQL Mutations
-[] Use this project as base for updating generator-kube-microservice-node
-[] Maybe get some stars?
+* [ ] GraphQL Mutations
+* [ ] Use this project as base for updating generator-kube-microservice-node
+* [ ] Maybe get some stars?
