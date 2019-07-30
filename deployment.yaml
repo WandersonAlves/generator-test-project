@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: generator-test-project
+spec:
+  selector:
+    matchLabels:
+      app: generator-test-project
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: generator-test-project
+    spec:
+      containers:
+        - name: generator-test-project
+          image: generator-test-project:latest
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            httpGet:
+              path: /health
+              port: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: generator-test-project
+  labels:
+    app: generator-test-project
+spec:
+  selector:
+    app: generator-test-project
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 3000
