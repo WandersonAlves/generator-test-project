@@ -33,7 +33,7 @@
     "@types/passport": "^1.0.0",
     "@types/redis": "^2.8.6",
     "amqplib": "^0.5.3",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
